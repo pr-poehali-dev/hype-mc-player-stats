@@ -1,8 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import RegisterModal from "@/components/RegisterModal";
 
 const mockPlayers = [
   { id: 1, name: "ShadowWarrior", wins: 2847, kills: 8943, winRate: 89, avatar: "/placeholder.svg" },
@@ -34,6 +36,20 @@ export default function Index() {
           <div className="absolute inset-0 bg-gradient-to-br from-neon-green/10 via-transparent to-accent-orange/10 animate-pulse"></div>
         </div>
         <div className="relative container mx-auto px-4 py-16 text-center">
+          {/* Хедер с кнопками */}
+          <div className="absolute top-4 right-4 flex gap-3">
+            <RegisterModal>
+              <Button className="bg-gradient-to-r from-neon-green to-accent-orange hover:from-neon-green/90 hover:to-accent-orange/90 text-black font-semibold">
+                <Icon name="UserPlus" className="mr-2 h-4 w-4" />
+                Регистрация
+              </Button>
+            </RegisterModal>
+            <Button variant="outline" className="border-neon-green/30 text-neon-green hover:bg-neon-green/10">
+              <Icon name="LogIn" className="mr-2 h-4 w-4" />
+              Войти
+            </Button>
+          </div>
+          
           <div className="mb-8 flex justify-center">
             <img 
               src="/img/c0c8eddc-bf9b-4281-99c6-ec8bb305b160.jpg" 
