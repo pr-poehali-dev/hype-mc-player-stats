@@ -61,7 +61,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'neon-green': '#00FF88',
+				'deep-blue': '#1A1A2E',
+				'midnight-blue': '#16213E',
+				'accent-orange': '#FF6B35'
+			},
+			fontFamily: {
+				orbitron: ['Orbitron', 'monospace'],
+				roboto: ['Roboto', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
